@@ -43,7 +43,7 @@
 			<mvc:mapping path="/*/*.do" />
 			<mvc:mapping path="/*/*/*.do" />
 			<beans:bean
-				class="com.bookshop01.common.interceptor.ViewNameInterceptor" />
+				class="com.jaeshop.common.interceptor.ViewNameInterceptor" />
 		</mvc:interceptor>
 	</mvc:interceptors>
 
