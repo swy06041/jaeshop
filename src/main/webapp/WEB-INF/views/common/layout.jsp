@@ -33,7 +33,7 @@
 	$(document).ready(function() {
 		$('#ad_main_banner').bjqs({
 			'width' : 775,
-			'height' : 145,
+			'height' : 345,
 			'showMarkers' : true,
 			'showControls' : false,
 			'centerMarkers' : false

@@ -8,10 +8,7 @@ public class MemberVO {
 	private String member_pw;
 	private String member_name;
 	private String member_gender;
-	private String member_birth_y;
-	private String member_birth_m;
-	private String member_birth_d;
-	private String member_birth_gn;
+	private String member_birth;
 	private String tel1;
 	private String tel2;
 	private String tel3;
@@ -61,36 +58,12 @@ public class MemberVO {
 		this.member_gender = member_gender;
 	}
 
-	public String getMember_birth_y() {
-		return member_birth_y;
+	public String getMember_birth() {
+		return member_birth;
 	}
 
-	public void setMember_birth_y(String member_birth_y) {
-		this.member_birth_y = member_birth_y;
-	}
-
-	public String getMember_birth_m() {
-		return member_birth_m;
-	}
-
-	public void setMember_birth_m(String member_birth_m) {
-		this.member_birth_m = member_birth_m;
-	}
-
-	public String getMember_birth_d() {
-		return member_birth_d;
-	}
-
-	public void setMember_birth_d(String member_birth_d) {
-		this.member_birth_d = member_birth_d;
-	}
-
-	public String getMember_birth_gn() {
-		return member_birth_gn;
-	}
-
-	public void setMember_birth_gn(String member_birth_gn) {
-		this.member_birth_gn = member_birth_gn;
+	public void setMember_birth(String member_birth) {
+		this.member_birth = member_birth;
 	}
 
 	public String getTel1() {

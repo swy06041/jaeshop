@@ -6,6 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -29,6 +31,8 @@ public class MemberControllerImpl extends BaseController implements MemberContro
 	private MemberService memberService;
 	@Autowired
 	private MemberVO memberVO;
+
+	private static final Logger logger = LoggerFactory.getLogger(MemberControllerImpl.class);
 
 	@Override
 	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
@@ -77,6 +81,9 @@ public class MemberControllerImpl extends BaseController implements MemberContro
 		ResponseEntity resEntity = null;
 		HttpHeaders responseHeaders = new HttpHeaders();
 		responseHeaders.add("Content-Type", "text/html; charset=utf-8");
+		
+		_memberVO.getHp2(); _memberVO.getHp2();
+		logger.info("회원정보" + _memberVO);
 		try {
 			memberService.addMember(_memberVO);
 			message = "<script>";

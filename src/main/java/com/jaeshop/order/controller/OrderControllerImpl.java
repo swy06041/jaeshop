@@ -78,10 +78,14 @@ public class OrderControllerImpl extends BaseController implements OrderControll
 		HttpSession session=request.getSession();
 		Map cartMap=(Map)session.getAttribute("cartMap");
 		List myOrderList=new ArrayList<OrderVO>();
+		System.out.println(cart_goods_qty.length);
+		for (int i = 0; i < cart_goods_qty.length; i++) {
+			System.out.println(cart_goods_qty[i]+"\n");
+			
+		}
 		
 		List<GoodsVO> myGoodsList=(List<GoodsVO>)cartMap.get("myGoodsList");
 		MemberVO memberVO=(MemberVO)session.getAttribute("memberInfo");
-		
 		for(int i=0; i<cart_goods_qty.length;i++){
 			String[] cart_goods=cart_goods_qty[i].split(":");
 			for(int j = 0; j< myGoodsList.size();j++) {
