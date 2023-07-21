@@ -51,8 +51,9 @@
             order by pay_order_time desc
 		]]>
 	</select>
-
-
+	<delete id="deleteMember" parameterType="String">
+		delete t_shopping_member where member_id = #{member_id}
+	</delete>
 	<select id="selectMyOrderInfo" resultMap="orderGoodsResult"
 		parameterType="String">
 	    <![CDATA[
@@ -138,9 +139,11 @@
 	</select>
 
 	<update id="updateMyOrderCancel" parameterType="String">
-		update t_shopping_order
+		update
+		t_shopping_order
 		set delivery_state='cancel_order'
-		where order_id=#{order_id}
+		where
+		order_id=#{order_id}
 	</update>
 
 

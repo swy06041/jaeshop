@@ -31,41 +31,31 @@
 		<result property="joinDate" column="joinDate" />
 		<result property="del_yn" column="del_yn" />
 	</resultMap>
+
+
 	<select id="listMember" resultMap="memberResult"
 		parameterType="java.util.HashMap">
-		select * from (
-		select rowNum as recNum,t.*
-		from (
-		select * from t_shoping_member
-		where to_char(joinDate,'yyyy-mm-dd') between #{beginDate} and #{endDate}
-		<if test="search_type=='member_id'">
-			AND member_id=#{search_word}
-		</if>
-		<if test="search_type=='member_name'">
-			AND member_name=#{search_word}
-		</if>
-		<if test="search_type=='member_hp_num'">
-			AND hp1||hp2||hp3=#{search_word}
-		</if>
-		order by joinDate desc
-		) t
-		)
-		where
-		recNum between (#{chapter}-1)*100+ (#{pageNum}-1)*10+1 and
-		(#{chapter}-1)*100+(#{pageNum})*10
+		select *
+		from t_shopping_member
 	</select>
+	<!-- SELECT * FROM ( select ROWNUM as recNum,LVL,articleNO, parentNO,title,id,writeDate 
+		from ( select LEVEL as LVL, articleNO,parentNO,title,id,writeDate from t_board 
+		START WITH parentNO=0 CONNECT BY PRIOR articleNO = parentNO ORDER SIBLINGS 
+		BY articleNO DESC)) where recNum between(10-1)*100+(10-1)*10+1 and (10-1)*100+10*10 -->
+
+
 
 	<select id="memberDetail" resultMap="memberResult"
 		parameterType="String">
 	    <![CDATA[
-		    select * from t_shoping_member
+		    select * from t_shopping_member
             where member_id=#{member_id}
     	]]>
 	</select>
 
 
 	<update id="modifyMemberInfo" parameterType="java.util.HashMap">
-		update t_shoping_member
+		update t_shopping_member
 		<set>
 			<if test=" member_pw!='' and member_pw!=null">
 				member_pw=#{member_pw},
@@ -126,4 +116,3 @@
 		member_id=#{member_id}
 	</update>
 </mapper>
-

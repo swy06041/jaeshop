@@ -122,6 +122,20 @@ public class MyPageControllerImpl extends BaseController implements MyPageContro
 	}
 
 	@Override
+	@RequestMapping(value = "/deleteMember.do", method = RequestMethod.GET)
+	public ModelAndView deleteMember(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		HttpSession session = request.getSession();
+		memberVO = (MemberVO) session.getAttribute("memberInfo");
+		String member_id = memberVO.getMember_id();
+		myPageService.deleteMember(member_id);
+		ModelAndView mav = new ModelAndView();
+//		session.removeAttribute("memberInfo");
+		session.invalidate();
+		mav.setViewName("redirect:/main/main.do");
+		return mav;
+	}
+
+	@Override
 	@RequestMapping(value = "/modifyMyInfo.do", method = RequestMethod.POST)
 	public ResponseEntity modifyMyInfo(@RequestParam("attribute") String attribute, @RequestParam("value") String value,
 			HttpServletRequest request, HttpServletResponse response) throws Exception {

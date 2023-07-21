@@ -203,9 +203,11 @@
 							<p>
 								<input type="text" id="zipcode" name="zipcode" size="10">
 								<a href="javascript:execDaumPostcode()">우편번호검색</a><br> <br>
-								도로명 주소:<br> <input type="text" id="roadAddress"
-									name="roadAddress" size="50"><br> <br> 나머지
-								주소: <input type="text" name="namujiAddress" size="50" />
+								<input type="hidden" id="jibunAddress" name="jibunAddress"
+									size="10" value = ""> 도로명 주소:<br> <input type="text"
+									id="roadAddress" name="roadAddress" size="50"><br>
+								<br> 나머지 주소: <input type="text" name="namujiAddress"
+									size="50" />
 								<!--   <span id="guide" style="color:#999"></span> -->
 							</p>
 						</td>

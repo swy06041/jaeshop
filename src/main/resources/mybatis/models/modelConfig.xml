@@ -15,7 +15,6 @@
 			alias="orderVO" />
 		<typeAlias type="com.jaeshop.mypage.vo.MyPageVO"
 			alias="mypageVO" />
-
 	</typeAliases>
 </configuration>
 

@@ -114,7 +114,7 @@
 		} else if (attribute == 'member_birth') {
 			var member_birth = frm_mod_member.member_birth;
 
-			value = + member_birth;
+			value = +member_birth;
 		} else if (attribute == 'tel') {
 			var tel1 = frm_mod_member.tel1;
 			var tel2 = frm_mod_member.tel2;

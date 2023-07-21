@@ -3,6 +3,7 @@ package com.jaeshop.admin.member.controller;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -89,12 +90,11 @@ public class AdminMemberControllerImpl extends BaseController implements AdminMe
 		String member_id = request.getParameter("member_id");
 		String mod_type = request.getParameter("mod_type");
 		String value = request.getParameter("value");
+
 		if (mod_type.equals("member_birth")) {
 			val = value.split(",");
-			memberMap.put("member_birth_y", val[0]);
-			memberMap.put("member_birth_m", val[1]);
-			memberMap.put("member_birth_d", val[2]);
-			memberMap.put("member_birth_gn", val[3]);
+			memberMap.put("member_birth", val[0]);
+
 		} else if (mod_type.equals("tel")) {
 			val = value.split(",");
 			memberMap.put("tel1", val[0]);
@@ -107,17 +107,20 @@ public class AdminMemberControllerImpl extends BaseController implements AdminMe
 			memberMap.put("hp2", val[1]);
 			memberMap.put("hp3", val[2]);
 			memberMap.put("smssts_yn", val[3]);
+
 		} else if (mod_type.equals("email")) {
 			val = value.split(",");
 			memberMap.put("email1", val[0]);
 			memberMap.put("email2", val[1]);
 			memberMap.put("emailsts_yn", val[2]);
+
 		} else if (mod_type.equals("address")) {
 			val = value.split(",");
 			memberMap.put("zipcode", val[0]);
 			memberMap.put("roadAddress", val[1]);
 			memberMap.put("jibunAddress", val[2]);
 			memberMap.put("namujiAddress", val[3]);
+
 		}
 
 		memberMap.put("member_id", member_id);

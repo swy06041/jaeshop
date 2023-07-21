@@ -26,23 +26,22 @@ import com.jaeshop.goods.vo.ImageFileVO;
 import com.jaeshop.member.vo.MemberVO;
 import com.jaeshop.order.vo.OrderVO;
 
-
 @Service("adminMemberService")
-@Transactional(propagation=Propagation.REQUIRED)
+@Transactional(propagation = Propagation.REQUIRED)
 public class AdminMemberServiceImpl implements AdminMemberService {
 	@Autowired
 	private AdminMemberDAO adminMemberDAO;
-	
-	public ArrayList<MemberVO> listMember(HashMap condMap) throws Exception{
+
+	public ArrayList<MemberVO> listMember(HashMap condMap) throws Exception {
 		return adminMemberDAO.listMember(condMap);
 	}
 
-	public MemberVO memberDetail(String member_id) throws Exception{
-		 return adminMemberDAO.memberDetail(member_id);
+	public MemberVO memberDetail(String member_id) throws Exception {
+		return adminMemberDAO.memberDetail(member_id);
 	}
-	
-	public void  modifyMemberInfo(HashMap memberMap) throws Exception{
-		 String member_id=(String)memberMap.get("member_id");
-		 adminMemberDAO.modifyMemberInfo(memberMap);
+
+	public void modifyMemberInfo(HashMap memberMap) throws Exception {
+		String member_id = (String) memberMap.get("member_id");
+		adminMemberDAO.modifyMemberInfo(memberMap);
 	}
 }
