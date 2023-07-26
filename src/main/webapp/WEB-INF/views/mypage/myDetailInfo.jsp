@@ -69,20 +69,12 @@
 
 	function selectBoxInit() {
 
-		var tel1 = '${memberInfo.tel1 }';
 		var hp1 = '${memberInfo.hp1}';
-		var selTel1 = document.getElementById('tel1');
+
 		var selHp1 = document.getElementById('hp1');
-		var optionTel1 = selTel1.options;
+
 		var optionHp1 = selHp1.options;
 		var val;
-		for (var i = 0; i < optionTel1.length; i++) {
-			val = optionTel1[i].value;
-			if (tel1 == val) {
-				optionTel1[i].selected = true;
-				break;
-			}
-		}
 
 		for (var i = 0; i < optionHp1.length; i++) {
 			val = optionHp1[i].value;
@@ -115,37 +107,13 @@
 			var member_birth = frm_mod_member.member_birth;
 
 			value = +member_birth;
-		} else if (attribute == 'tel') {
-			var tel1 = frm_mod_member.tel1;
-			var tel2 = frm_mod_member.tel2;
-			var tel3 = frm_mod_member.tel3;
 
-			for (var i = 0; tel1.length; i++) {
-				if (tel1[i].selected) {
-					value_tel1 = tel1[i].value;
-					break;
-				}
-			}
-			value_tel2 = tel2.value;
-			value_tel3 = tel3.value;
-			value = value_tel1 + "," + value_tel2 + ", " + value_tel3;
 		} else if (attribute == 'hp') {
 			var hp1 = frm_mod_member.hp1;
-			var hp2 = frm_mod_member.hp2;
-			var hp3 = frm_mod_member.hp3;
-			var smssts_yn = frm_mod_member.smssts_yn;
 
-			for (var i = 0; hp1.length; i++) {
-				if (hp1[i].selected) {
-					value_hp1 = hp1[i].value;
-					break;
-				}
-			}
-			value_hp2 = hp2.value;
-			value_hp3 = hp3.value;
+			var smssts_yn = frm_mod_member.smssts_yn;
 			value_smssts_yn = smssts_yn.checked;
-			value = value_hp1 + "," + value_hp2 + ", " + value_hp3 + ","
-					+ value_smssts_yn;
+			value = value_hp1 + "," + value_smssts_yn;
 		} else if (attribute == 'email') {
 			var email1 = frm_mod_member.email1;
 			var email2 = frm_mod_member.email2;
@@ -248,53 +216,11 @@
 						<td><input type="button" value="수정하기"
 							onClick="fn_modify_member_info('member_birth')" /></td>
 					</tr>
-					<tr class="dot_line">
-						<td class="fixed_join">전화번호</td>
-						<td><select name="tel1" id="tel1">
-								<option value="00">없음</option>
-								<option value="02">02</option>
-								<option value="031">031</option>
-								<option value="032">032</option>
-								<option value="033">033</option>
-								<option value="041">041</option>
-								<option value="042">042</option>
-								<option value="043">043</option>
-								<option value="044">044</option>
-								<option value="051">051</option>
-								<option value="052">052</option>
-								<option value="053">053</option>
-								<option value="054">054</option>
-								<option value="055">055</option>
-								<option value="061">061</option>
-								<option value="062">062</option>
-								<option value="063">063</option>
-								<option value="064">064</option>
-								<option value="0502">0502</option>
-								<option value="0503">0503</option>
-								<option value="0505">0505</option>
-								<option value="0506">0506</option>
-								<option value="0507">0507</option>
-								<option value="0508">0508</option>
-								<option value="070">070</option>
-						</select> - <input type="text" size=4 name="tel2"
-							value="${memberInfo.tel2 }"> - <input type="text" size=4
-							name="tel3" value="${memberInfo.tel3 }"></td>
-						<td><input type="button" value="수정하기"
-							onClick="fn_modify_member_info('tel')" /></td>
-					</tr>
+
 					<tr class="dot_line">
 						<td class="fixed_join">휴대폰번호</td>
-						<td><select name="hp1" id="hp1">
-								<option>없음</option>
-								<option value="010">010</option>
-								<option value="011">011</option>
-								<option value="016">016</option>
-								<option value="017">017</option>
-								<option value="018">018</option>
-								<option value="019">019</option>
-						</select> - <input type="text" name="hp2" size=4 value="${memberInfo.hp2 }">
-							- <input type="text" name="hp3" size=4 value="${memberInfo.hp3 }"><br>
-							<br> <c:choose>
+						<td><input type="text" name="hp1" size=4
+							value="${memberInfo.hp1 }"><br> <br> <c:choose>
 								<c:when test="${memberInfo.smssts_yn=='true' }">
 									<input type="checkbox" name="smssts_yn" value="Y" checked /> 쇼핑몰에서 발송하는 SMS 소식을 수신합니다.
 						</c:when>
@@ -364,8 +290,7 @@
 				</tr>
 			</table>
 		</div>
-		<input type="hidden" name="h_tel1" value="${memberInfo.tel1}" /> <input
-			type="hidden" name="h_hp1" value="${memberInfo.hp1}" />
+		<input type="hidden" name="h_hp1" value="${memberInfo.hp1}" />
 	</form>
 </body>
 </html>

@@ -67,15 +67,8 @@
 				<TR class="dot_line">
 					<TD class="fixed_join">휴대폰번호</TD>
 					<TD>
-					  ${myOrderInfo.receiver_hp1}-${myOrderInfo.receiver_hp2}-${myOrderInfo.receiver_hp3}</TD>
+					  ${myOrderInfo.receiver_hp1}</TD>
 				  </TR>
-				<TR class="dot_line">
-					<TD class="fixed_join">유선전화(선택)</TD>
-					<TD>
-					   ${myOrderInfo.receiver_tel1}-${myOrderInfo.receiver_tel2}-${myOrderInfo.receiver_tel3}</TD>
-					</TD>
-				</TR>
-
 
 				<TR class="dot_line">
 					<TD class="fixed_join">주소</TD>
@@ -113,7 +106,7 @@
 			  <tr class="dot_line">
 				<td ><h2>핸드폰</h2></td>
 				<td>
-				 <input  type="text" value="${orderer.hp1}-${orderer.hp2}-${orderer.hp3}" size="15" disabled />
+				 <input  type="text" value="${orderer.hp1}" size="15" disabled />
 				</td>
 			  </tr>
 			  <tr class="dot_line">

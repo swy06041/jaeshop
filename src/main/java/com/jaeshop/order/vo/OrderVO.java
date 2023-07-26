@@ -16,11 +16,6 @@ public class OrderVO {
 	private String orderer_name;
 	private String receiver_name;
 	private String receiver_hp1;
-	private String receiver_hp2;
-	private String receiver_hp3;
-	private String receiver_tel1;
-	private String receiver_tel2;
-	private String receiver_tel3;
 
 	private String delivery_address;
 	private String delivery_message;
@@ -156,46 +151,6 @@ public class OrderVO {
 
 	public void setReceiver_hp1(String receiver_hp1) {
 		this.receiver_hp1 = receiver_hp1;
-	}
-
-	public String getReceiver_hp2() {
-		return receiver_hp2;
-	}
-
-	public void setReceiver_hp2(String receiver_hp2) {
-		this.receiver_hp2 = receiver_hp2;
-	}
-
-	public String getReceiver_hp3() {
-		return receiver_hp3;
-	}
-
-	public String getReceiver_tel1() {
-		return receiver_tel1;
-	}
-
-	public void setReceiver_tel1(String receiver_tel1) {
-		this.receiver_tel1 = receiver_tel1;
-	}
-
-	public String getReceiver_tel2() {
-		return receiver_tel2;
-	}
-
-	public void setReceiver_tel2(String receiver_tel2) {
-		this.receiver_tel2 = receiver_tel2;
-	}
-
-	public String getReceiver_tel3() {
-		return receiver_tel3;
-	}
-
-	public void setReceiver_tel3(String receiver_tel3) {
-		this.receiver_tel3 = receiver_tel3;
-	}
-
-	public void setReceiver_hp3(String receiver_hp3) {
-		this.receiver_hp3 = receiver_hp3;
 	}
 
 	public String getDelivery_address() {

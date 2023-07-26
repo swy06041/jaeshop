@@ -147,17 +147,10 @@ public class MyPageControllerImpl extends BaseController implements MyPageContro
 		if (attribute.equals("member_birth")) {
 			val = value.split(",");
 			memberMap.put("member_birth", val[0]);
-		} else if (attribute.equals("tel")) {
-			val = value.split(",");
-			memberMap.put("tel1", val[0]);
-			memberMap.put("tel2", val[1]);
-			memberMap.put("tel3", val[2]);
 		} else if (attribute.equals("hp")) {
 			val = value.split(",");
 			memberMap.put("hp1", val[0]);
-			memberMap.put("hp2", val[1]);
-			memberMap.put("hp3", val[2]);
-			memberMap.put("smssts_yn", val[3]);
+			memberMap.put("smssts_yn", val[1]);
 		} else if (attribute.equals("email")) {
 			val = value.split(",");
 			memberMap.put("email1", val[0]);
