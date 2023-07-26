@@ -176,7 +176,7 @@ function fn_cancel_order(order_id){
 	   전화번호 
    </td>
     <td>
-	   <strong>${memberInfo.hp1 }-${memberInfo.hp2}-${memberInfo.hp3 }</strong>
+	   <strong>${memberInfo.hp1 }</strong>
    </td>
    </tr>
    <tr>

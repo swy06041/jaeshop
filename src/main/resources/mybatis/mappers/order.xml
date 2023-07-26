@@ -18,12 +18,7 @@
 		<result property="orderer_name" column="orderer_name" />
 		<result property="receiver_name" column="receiver_name" />
 		<result property="receiver_hp1" column="receiver_hp1" />
-		<result property="receiver_hp2" column="receiver_hp2" />
-		<result property="receiver_hp3" column="receiver_hp3" />
-		
-		<result property="receiver_tel1" column="receiver_tel1" />
-		<result property="receiver_tel2" column="receiver_tel2" />
-		<result property="receiver_tel3" column="receiver_tel3" />
+
 		<result property="delivery_address" column="delivery_address" />
 		<result property="delivery_message" column="delivery_message" />
 		
@@ -66,11 +61,6 @@
 									    orderer_name,
 									    receiver_name,
 									    receiver_hp1,
-					                    receiver_hp2,
-					                    receiver_hp3,
-					                    receiver_tel1,
-					                    receiver_tel2,
-					                    receiver_tel3,
 					                    delivery_address,
 					                    delivery_message,
 						                delivery_method,
@@ -91,11 +81,6 @@
 									    #{orderer_name},
 									    #{receiver_name},
 									    #{receiver_hp1},
-					                    #{receiver_hp2},
-					                    #{receiver_hp3},
-					                    #{receiver_tel1},
-					                    #{receiver_tel2},
-					                    #{receiver_tel3},
 					                    #{delivery_address},
 					                    #{delivery_message},
 						                #{delivery_method},

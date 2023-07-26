@@ -13,13 +13,8 @@
 
 		<result property="member_birth" column="member_birth" />
 
-		<result property="tel1" column="tel1" />
-		<result property="tel2" column="tel2" />
-		<result property="tel3" column="tel3" />
-
 		<result property="hp1" column="hp1" />
-		<result property="hp2" column="hp2" />
-		<result property="hp3" column="hp3" />
+
 		<result property="smssts_yn" column="smssts_yn" />
 		<result property="email1" column="email1" />
 		<result property="email2" column="email2" />
@@ -53,16 +48,11 @@
 	<insert id="insertNewMember" parameterType="memberVO">
   <![CDATA[
     	insert into t_shopping_member(member_id,
-				 					                  member_pw,
+				 					 member_pw,
                                      member_name,
                                      member_gender,
                                      member_birth,
-                                     tel1,
-                                     tel2,
-                                     tel3,
                                      hp1,
-                                     hp2,
-                                     hp3,
                                      smssts_yn,
                                      email1,
                                      email2,
@@ -76,12 +66,7 @@
 									#{member_name},
                                  	#{member_gender},
                                     #{member_birth},
-                                    #{tel1},
-                                    #{tel2},
-                                    #{tel3},
                                     #{hp1},
-                                    #{hp2},
-                                    #{hp3},
                                     #{smssts_yn},
                                     #{email1},
                                     #{email2},

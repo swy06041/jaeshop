@@ -12,13 +12,8 @@
 
 		<result property="member_birth" column="member_birth" />
 
-		<result property="tel1" column="tel1" />
-		<result property="tel2" column="tel2" />
-		<result property="tel3" column="tel3" />
-
 		<result property="hp1" column="hp1" />
-		<result property="hp2" column="hp2" />
-		<result property="hp3" column="hp3" />
+
 		<result property="smssts_yn" column="smssts_yn" />
 		<result property="email1" column="email1" />
 		<result property="email2" column="email2" />
@@ -66,24 +61,11 @@
 			<if test=" member_birth!='' and member_birth!=null">
 				member_birth=#{member_birth},
 			</if>
-			<if test=" tel1!='' and tel1!=null">
-				tel1=#{tel1},
-			</if>
-			<if test=" tel2!='' and tel2!=null">
-				tel2=#{tel2},
-			</if>
-			<if test=" tel3!='' and tel3!=null">
-				tel3=#{tel3},
-			</if>
+
 			<if test=" hp1!='' and hp1!=null">
 				hp1=#{hp1},
 			</if>
-			<if test=" hp2!='' and hp2!=null">
-				hp2=#{hp2},
-			</if>
-			<if test=" hp3!='' and hp3!=null">
-				hp3=#{hp3},
-			</if>
+
 			<if test=" smssts_yn!='' and smssts_yn!=null">
 				smssts_yn=#{smssts_yn},
 			</if>

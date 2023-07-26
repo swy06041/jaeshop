@@ -421,7 +421,7 @@
 								</a></td>
 								<td width=10%><strong>${item.member_name}</strong><br>
 								</td>
-								<td width=10%><strong>${item.hp1}-${item.hp2}-${item.hp3}</strong><br>
+								<td width=10%><strong>${item.hp1}</strong><br>
 								</td>
 								<td width=50%><strong>${item.roadAddress}</strong><br>
 									<strong>${item.jibunAddress}</strong><br> <strong>${item.namujiAddress}</strong><br>

@@ -9,12 +9,7 @@ public class MemberVO {
 	private String member_name;
 	private String member_gender;
 	private String member_birth;
-	private String tel1;
-	private String tel2;
-	private String tel3;
 	private String hp1;
-	private String hp2;
-	private String hp3;
 	private String smssts_yn;
 	private String email1;
 	private String email2;
@@ -66,52 +61,12 @@ public class MemberVO {
 		this.member_birth = member_birth;
 	}
 
-	public String getTel1() {
-		return tel1;
-	}
-
-	public void setTel1(String tel1) {
-		this.tel1 = tel1;
-	}
-
-	public String getTel2() {
-		return tel2;
-	}
-
-	public void setTel2(String tel2) {
-		this.tel2 = tel2;
-	}
-
-	public String getTel3() {
-		return tel3;
-	}
-
-	public void setTel3(String tel3) {
-		this.tel3 = tel3;
-	}
-
 	public String getHp1() {
 		return hp1;
 	}
 
 	public void setHp1(String hp1) {
 		this.hp1 = hp1;
-	}
-
-	public String getHp2() {
-		return hp2;
-	}
-
-	public void setHp2(String hp2) {
-		this.hp2 = hp2;
-	}
-
-	public String getHp3() {
-		return hp3;
-	}
-
-	public void setHp3(String hp3) {
-		this.hp3 = hp3;
 	}
 
 	public String getEmail1() {

@@ -81,8 +81,7 @@ public class MemberControllerImpl extends BaseController implements MemberContro
 		ResponseEntity resEntity = null;
 		HttpHeaders responseHeaders = new HttpHeaders();
 		responseHeaders.add("Content-Type", "text/html; charset=utf-8");
-		
-		_memberVO.getHp2(); _memberVO.getHp2();
+	
 		logger.info("회원정보" + _memberVO);
 		try {
 			memberService.addMember(_memberVO);
