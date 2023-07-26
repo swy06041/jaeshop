@@ -10,11 +10,11 @@
 <div id="ad_main_banner">
 	<ul class="bjqs">
 		<li><img width="775" height="345"
-			src="${contextPath}/resources/image/main_banner01.jpg"></li>
+			src="${contextPath}/resources/image/diablo.png"></li>
 		<li><img width="775" height="345"
-			src="${contextPath}/resources/image/main_banner02.jpg"></li>
+			src="${contextPath}/resources/image/ryzen.png"></li>
 		<li><img width="775" height="345"
-			src="${contextPath}/resources/image/main_banner03.jpg"></li>
+			src="${contextPath}/resources/image/nvidia.png"></li>
 	</ul>
 </div>
 <div class="main_book">

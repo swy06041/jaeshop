@@ -112,7 +112,6 @@
 						<UL>
 							<li><a href="#">장바구니</a></li>
 							<li><a href="#">구매하기</a></li>
-							<li><a href="#">비교하기</a></li>
 						</UL>
 					</td>
 			</tr>
