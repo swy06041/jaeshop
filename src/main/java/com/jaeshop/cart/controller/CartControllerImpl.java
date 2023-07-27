@@ -53,8 +53,7 @@ public class CartControllerImpl extends BaseController implements CartController
 		HttpSession session=request.getSession();
 		memberVO=(MemberVO)session.getAttribute("memberInfo");
 		String member_id=memberVO.getMember_id();
-		
-		cartVO.setMember_id(member_id);
+	
 		//카트 등록전에 이미 등록된 제품인지 판별한다.
 		cartVO.setGoods_id(goods_id);
 		cartVO.setMember_id(member_id);
