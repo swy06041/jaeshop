@@ -63,29 +63,6 @@
 				}).open();
 	}
 
-	window.onload = function() {
-		selectBoxInit();
-	}
-
-	function selectBoxInit() {
-
-		var hp1 = '${memberInfo.hp1}';
-
-		var selHp1 = document.getElementById('hp1');
-
-		var optionHp1 = selHp1.options;
-		var val;
-
-		for (var i = 0; i < optionHp1.length; i++) {
-			val = optionHp1[i].value;
-			if (hp1 == val) {
-				optionHp1[i].selected = true;
-				break;
-			}
-		}
-
-	}
-
 	function fn_modify_member_info(attribute) {
 		var value;
 		// alert(member_id);
@@ -102,11 +79,10 @@
 					break;
 				}
 			}
-
 		} else if (attribute == 'member_birth') {
 			var member_birth = frm_mod_member.member_birth;
 
-			value = +member_birth;
+			value = member_birth;
 
 		} else if (attribute == 'hp') {
 			var hp1 = frm_mod_member.hp1;
@@ -212,14 +188,14 @@
 					<tr class="dot_line">
 						<td class="fixed_join">법정생년월일</td>
 						<td><input type="text" size=10 name="member_birth"
-							value="${memberInfo.member_birth}"></td>
+							value="${memberInfo.member_birth}" minlength="8" maxlength="8"></td>
 						<td><input type="button" value="수정하기"
 							onClick="fn_modify_member_info('member_birth')" /></td>
 					</tr>
 
 					<tr class="dot_line">
 						<td class="fixed_join">휴대폰번호</td>
-						<td><input type="text" name="hp1" size=4
+						<td><input type="text" name="hp1" size=10
 							value="${memberInfo.hp1 }"><br> <br> <c:choose>
 								<c:when test="${memberInfo.smssts_yn=='true' }">
 									<input type="checkbox" name="smssts_yn" value="Y" checked /> 쇼핑몰에서 발송하는 SMS 소식을 수신합니다.

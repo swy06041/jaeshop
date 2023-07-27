@@ -73,13 +73,12 @@
 		</c:if>
 	</c:forEach>
 </div>
-
+<%-- 
 <div class="clear"></div>
 <div id="ad_sub_banner">
 	<img width="770" height="117"
 		src="${contextPath}/resources/image/sub_banner02.jpg">
 </div>
-
 
 <div class="main_book">
 	<c:set var="goods_count" value="0" />
@@ -105,6 +104,6 @@
 			</div>
 		</c:if>
 	</c:forEach>
-</div>
+</div> --%>
 
 

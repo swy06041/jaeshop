@@ -45,15 +45,15 @@
 	<li>
 		<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;국내외 도서</h3>
 		<ul>
-			<li><a href="${contextPath}/goods/goodsList.do?">IT/인터넷</a></li>
-			<li><a href="#">경제/경영</a></li>
-			<li><a href="#">대학교재</a></li>
-			<li><a href="#">자기계발</a></li>
-			<li><a href="#">자연과학/공학</a></li>
-			<li><a href="#">역사/인문학</a></li>
+			<li><a href="${contextPath}/goods/goodsList.do?">CPU</a></li>
+			<li><a href="#">메인보드</a></li>
+			<li><a href="#">그래픽카드</a></li>
+			<li><a href="#">RAM/HDD/SSD</a></li>
+			<li><a href="#">파워/케이스</a></li>
+			<li><a href="#">PC 주변 기기</a></li>
 		</ul>
 	</li>
-	<li>
+<!-- 	<li>
 		<h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;음반</h3>
 		<ul>
 			<li><a href="#">가요</a></li>
@@ -63,7 +63,7 @@
 			<li><a href="#">재즈</a></li>
 			<li><a href="#">기타</a></li>
 		</ul>
-	</li>
+	</li> -->
  </c:otherwise>
 </c:choose>	
 </ul>
