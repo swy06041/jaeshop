@@ -10,11 +10,11 @@
 <div id="ad_main_banner">
 	<ul class="bjqs">
 		<li><img width="775" height="345"
-			src="${contextPath}/resources/image/diablo.png"></li>
+			src="${contextPath}/resources/image/main_banner01.jpg"></li>
 		<li><img width="775" height="345"
-			src="${contextPath}/resources/image/ryzen.png"></li>
+			src="${contextPath}/resources/image/main_banner02.jpg"></li>
 		<li><img width="775" height="345"
-			src="${contextPath}/resources/image/nvidia.png"></li>
+			src="${contextPath}/resources/image/main_banner03.jpg"></li>
 	</ul>
 </div>
 <div class="main_book">
@@ -73,7 +73,6 @@
 		</c:if>
 	</c:forEach>
 </div>
-<%-- 
 <div class="clear"></div>
 <div id="ad_sub_banner">
 	<img width="770" height="117"
@@ -104,6 +103,6 @@
 			</div>
 		</c:if>
 	</c:forEach>
-</div> --%>
+</div>
 
 
