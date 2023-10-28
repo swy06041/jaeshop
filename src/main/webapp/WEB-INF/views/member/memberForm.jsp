@@ -132,7 +132,7 @@
 							</tr>
 							<tr class="dot_line">
 								<td class="fixed_join">휴대폰번호</td>
-								<td><input type="text" size="10px" name="hp1" placeholder="- 빼고 입력하세요"><br> <br> <input type="checkbox"
+								<td><input type="text" size="15px" name="hp1" placeholder=" - 빼고 입력하세요"><br> <br> <input type="checkbox"
 										name="smssts_yn" value="Y" checked /> 쇼핑몰에서 발송하는
 									SMS 소식을 수신합니다.</td>
 							</tr>
