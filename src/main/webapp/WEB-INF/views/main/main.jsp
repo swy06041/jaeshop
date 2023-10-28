@@ -63,7 +63,7 @@
 			<div class="price">
 				<fmt:formatNumber value="${item.goods_price}" type="number"
 					var="goods_price" />
-				${goods_price}원 ddddddd
+				${goods_price}원
 			</div>
 		</div>
 		<c:if test="${goods_count==15   }">
