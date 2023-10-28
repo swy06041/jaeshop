@@ -135,7 +135,7 @@
 		} else if (mod_type == 'member_birth') {
 			var member_birth = frm_mod_member.member_birth;
 
-			value = +member_birth;
+			value = member_birth;
 		
 		} else if (mod_type == 'hp') {
 			var hp1 = frm_mod_member.hp1;
@@ -276,7 +276,7 @@
 					</tr>
 					<tr class="dot_line">
 						<td class="fixed_join">휴대폰번호</td>
-					<td><input type="text" name="hp1" size=4 value="${member_info.hp1 }"><br> <br>
+					<td><input type="text" name="hp1" size="15" value="${member_info.hp1 }"><br> <br>
 							<c:choose>
 								<c:when test="${member_info.smssts_yn=='true' }">
 									<input type="checkbox" name="smssts_yn" value="Y" checked /> 쇼핑몰에서 발송하는 SMS 소식을 수신합니다.
